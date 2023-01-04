@@ -5,6 +5,9 @@
  */
 package lanzarexcepcion;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author hola
@@ -17,7 +20,11 @@ public class LanzarExcepcion {
     public static void main(String[] args) {
         // TODO code application logic here
         Usuario u1 = new Usuario("Pepe",10);
-        u1.verificarEdad();
+        try {
+            u1.verificarEdad();
+        } catch (InstantiationException ex) {
+            System.out.println("Es menor de edad");
+        }
     }
     
 }

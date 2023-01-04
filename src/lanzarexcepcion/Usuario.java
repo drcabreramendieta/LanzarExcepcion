@@ -18,9 +18,9 @@ public class Usuario {
         this.edad = edad;
     }
     
-    public void verificarEdad(){
+    public void verificarEdad() throws java.lang.InstantiationException{
         if(edad < 18){
-            throw new java.lang.ArithmeticException("Es menor de edad con "+edad+" años");
+            throw new java.lang.InstantiationException("Es menor de edad con "+edad+" años");
         }
         else{
             System.out.println("Es mayor de edad");
